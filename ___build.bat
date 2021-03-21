@@ -45,7 +45,6 @@ for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 "C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%kefir_dir% -y
 
-
 :noatmo
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 
@@ -57,7 +56,7 @@ xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%hekate%\hekate.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
-xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI.nro" /H /Y /C /R
+xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 xcopy "%hekate%\libsys_lp0.bso" "%kefir_dir%\bootloader\sys\libsys_lp0.bso" /H /Y /C /R
 xcopy "%hekate%\libsys_minerva.bso" "%kefir_dir%\bootloader\sys\libsys_minerva.bso" /H /Y /C /R
 xcopy "%hekate%\module_sample.bso" "%kefir_dir%\bootloader\sys\module_sample.bso" /H /Y /C /R
