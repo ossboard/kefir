@@ -59,8 +59,8 @@ xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\version" "%site_files%\" /H /Y /C /R
-xcopy "%working_dir%\version" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
-xcopy "%kefirupdater%" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
+rem xcopy "%working_dir%\version" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
+rem xcopy "%kefirupdater%" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
