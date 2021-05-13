@@ -483,7 +483,8 @@ if exist "%sd%:\switch\nx-ntpc.nro" (del "%sd%:\switch\nx-ntpc.nro")
 if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 if exist "%sd%:\switch\.DBI.nro.star" (del "%sd%:\switch\.DBI.nro.star")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
-if exist "%sd%:\switch\dbi\dbi.config" (copy "%sd%:\switch\dbi\dbi.config" "%sd%:\switch\dbi\dbi.config.bak")
+rem if exist "%sd%:\switch\dbi\dbi.config" (copy "%sd%:\switch\dbi\dbi.config" "%sd%:\switch\dbi\dbi.config.bak")
+if exist "%sd%:\switch\dbi\dbi.config" (del "%sd%:\switch\dbi\dbi.config")
 if exist "%sd%:\switch\nxmtp.nro" (del "%sd%:\switch\nxmtp.nro")
 if exist "%sd%:\switch\nxmtp" (RD /s /q "%sd%:\switch\nxmtp\")
 if exist "%sd%:\switch\NX-Activity-Log.nro" (del "%sd%:\switch\NX-Activity-Log.nro")
@@ -630,7 +631,6 @@ if exist "%sd%:\titles" (RD /s /q "%sd%:\titles")
 
 if %modchip%==0 (del "%sd%:\boot.dat")
 if %modchip%==0 (del "%sd%:\boot.ini")
-if exist "%sd%:\install.bat" (del "%sd%:\install.bat")
 
 goto caffeine
 
@@ -730,11 +730,13 @@ if exist ._.* del /s /q /f /a ._.*
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbstor\11ECA7E0 /v MaximumTransferLength /t REG_DWORD /d 00100000 /f
 if exist "%sd%:\TinGen" (RD /s /q "%sd%:\TinGen")
 
-if exist "%sd%:\switch\dbi\dbi.config.bak" (
-	del "%sd%:\switch\dbi\dbi.config"
-	copy "%sd%:\switch\dbi\dbi.config.bak" "%sd%:\switch\dbi\dbi.config"
-	del "%sd%:\switch\dbi\dbi.config.bak"
-	)
+rem if exist "%sd%:\switch\dbi\dbi.config.bak" (
+rem 	del "%sd%:\switch\dbi\dbi.config"
+rem 	copy "%sd%:\switch\dbi\dbi.config.bak" "%sd%:\switch\dbi\dbi.config"
+rem 	del "%sd%:\switch\dbi\dbi.config.bak"
+rem 	)
+
+if exist "%sd%:\install.bat" (del "%sd%:\install.bat")
 
 echo                                   DONE                                  
 echo ------------------------------------------------------------------------
