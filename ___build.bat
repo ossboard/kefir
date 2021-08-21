@@ -63,8 +63,8 @@ xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
+xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
+xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%working_dir%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
@@ -194,16 +194,9 @@ if exist "%sd%\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!README.md -xr!install1.bat  %reldir%\kefir.zip %kefir_dir%\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!README.md -xr!install1.bat  %reldir%\atmo.zip %kefir_dir%\*
 
-rem rem atmo
-rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -xr!kefir_installer -xr!kefir.png -xr!desktop.ini -ssw %reldir%\atmo.zip %build_dir%\*
-
-rem rem sxchip
-rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!Incognito_RCM.bin -xr!kefir.png -xr!desktop.ini -xr!exosphere.ini %reldir%\modchip.zip %build_dir%\chip\*
-
-
-rem pause
+pause
 
 echo ------------------------------------------------------------------------
 echo.
