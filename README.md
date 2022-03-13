@@ -1,5 +1,8 @@
 # kefir ![Github latest downloads](https://img.shields.io/github/downloads/rashevskyv/kefir/total.svg)
 
+
+- 본프로그램은, 닌텐도스위치 2018.6월이전버전용 올인원 입니다. 최신을 모두 유지합니다. 
+
 CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 
 ## What does kefir consist of
